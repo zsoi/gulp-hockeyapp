@@ -46,6 +46,12 @@ module.exports = {
         postOpts.formData.status = options.status;
       }
 
+      // Optional notes
+      if (options.notes) {
+        postOpts.formData.notes = options.notes;
+      }
+
+
       request.post(postOpts, function(err, response) {
         if (err) {
           return reject(err);
