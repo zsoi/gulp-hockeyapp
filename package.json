@@ -3,6 +3,9 @@
   "version": "0.2.3",
   "description": "Gulp task for uploading builds to HockeyApp service.",
   "main": "index.js",
+  "dependencies": {
+    "request": "^2.74.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
