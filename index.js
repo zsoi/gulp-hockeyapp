@@ -31,9 +31,19 @@ module.exports = {
         }
       };
 
+      // Optional user list
+      if (options.userList && options.userList.length) {
+        postOpts.formData.users = options.userList.join(',');
+      }
+      
       // Optional team list
       if (options.teamList && options.teamList.length) {
         postOpts.formData.teams = options.teamList.join(',');
+      }
+      
+      // Optional tag list
+      if (options.tagList && options.tagList.length) {
+        postOpts.formData.tags = options.tagList.join(',');
       }
 
       // Optional notify
@@ -41,6 +51,11 @@ module.exports = {
         postOpts.formData.notify = options.notify;
       }
 
+      // Optional mandatory version
+      if (options.mandatory) {
+        postOpts.formData.mandatory = options.mandatory;
+      }
+      
       // Optional status
       if (options.status) {
         postOpts.formData.status = options.status;
